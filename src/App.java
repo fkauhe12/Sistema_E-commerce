@@ -8,7 +8,7 @@ public class App {
         // Dados iniciais
         Endereco endereco = new Endereco("123", "Centro", "CidadeX", "EstadoY", "12345-678");
         Cliente cliente = new Cliente("João", "joao@email.com", endereco, "123.456.789-00", "99999-9999");
-        Administrador admin = new Administrador("Maria", "maria@email.com", endereco, "987.654.321-00", "88888-8888");
+        Administrador admin = new Administrador("Felipé", "felipe@email.com", endereco, "987.654.321-00", "88888-8888");
 
         // Produtos disponíveis
         List<Produtos> estoque = new ArrayList<>();
@@ -97,6 +97,8 @@ public class App {
                     System.out.println("\n--- ADMIN ---");
                     System.out.println("1. Cadastrar novo produto");
                     System.out.println("2. Gerar relatório");
+                    System.out.println("3. remover produto");
+                    System.out.println("0. Voltar");
                     System.out.print("Escolha: ");
                     int opAdmin = sc.nextInt();
                     sc.nextLine();
@@ -117,6 +119,19 @@ public class App {
                         System.out.println("Produto cadastrado!");
                     } else if (opAdmin == 2) {
                         admin.gerarRelatorio();
+                    } else if (opAdmin == 3) {
+                        System.out.print("Digite o índice do produto para remover: ");
+                        int idxRemProd = sc.nextInt();
+                        if (idxRemProd >= 0 && idxRemProd < estoque.size()) {
+                            estoque.remove(idxRemProd);
+                            System.out.println("Produto removido.");
+                        } else {
+                            System.out.println("Indice invalido.");
+                        }
+                    } else if (opAdmin == 0) {
+                        System.out.println("Voltando ao menu principal...");
+                    } else {
+                        System.out.println("Opção inválida.");
                     }
                     break;
                 case 0:
