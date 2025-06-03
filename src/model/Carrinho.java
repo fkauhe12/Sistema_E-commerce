@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
+    // Atributos
     private int id;
     private Cliente cliente;
     private List<Produtos> listaDeProdutos;
     private double total;
     private static int contador = 1;
+
+    // Construtor
 
     public Carrinho(Cliente cliente) {
         this.id = contador++;
@@ -17,6 +20,8 @@ public class Carrinho {
         this.total = 0.0;
     }
 
+    // Métodos
+   
     public void adicionarProduto(Produtos produto) {
         listaDeProdutos.add(produto);
         calcularTotal();
@@ -34,6 +39,7 @@ public class Carrinho {
         }
     }
 
+    // Getters
     public double getTotal() {
         return total;
     }

@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Pedido {
+    // Atributos
     private int id;
     private Cliente cliente;
     private List<Produtos> produtos;
@@ -11,6 +12,8 @@ public class Pedido {
     private String status;
     private double valorTotal;
     private static int contador = 1;
+
+    // Construtor
 
     public Pedido(Cliente cliente, List<Produtos> produtos, double valorTotal) {
         this.id = contador++;

@@ -5,11 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoController {
+    // Atributos
     private List<Produtos> produtos;
-
+    // Construtor
     public ProdutoController() {
         this.produtos = new ArrayList<>();
     }
+
+    // Métodos
 
     public void adicionarProduto(Produtos produto) {
         produtos.add(produto);

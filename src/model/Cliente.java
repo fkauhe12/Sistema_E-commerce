@@ -1,11 +1,14 @@
 package model;
 
 public class Cliente extends Pessoa {
+    // Atributos
     private int id;
     private String cpf;
     private String telefone;
     private static int contador = 1;
     private String senha = "1234";
+
+    // Construtor
 
     public Cliente(String nome, String email, Endereco endereco, String cpf, String telefone) {
         super(nome, email, endereco);

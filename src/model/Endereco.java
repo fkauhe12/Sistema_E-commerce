@@ -7,7 +7,7 @@ public class Endereco {
     private String estado;
     private String cep;
 
-    public Endereco(String numero, String bairro, String cidade, String estado, String cep) {
+    public Endereco(String numero, String bairro, String cidade, String estado, String cep){
         this.numero = numero;
         this.bairro = bairro;
         this.cidade = cidade;
@@ -56,6 +56,8 @@ public class Endereco {
     public void setCep(String cep) {
         this.cep = cep;
     }
+
+    // Método 
     
     @Override
     public String toString() {

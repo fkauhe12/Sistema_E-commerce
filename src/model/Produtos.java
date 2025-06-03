@@ -1,6 +1,7 @@
 package model;
 
 public class Produtos {
+    // Atributos
     private int id;
     private String nome;
     private String descricao;
@@ -9,6 +10,7 @@ public class Produtos {
     private String categoria;
     private static int contador = 1;
 
+    // Construtor
     public Produtos(String nome, String descricao, double preco, int estoque, String categoria) {
         this.id = contador++;
         this.nome = nome;

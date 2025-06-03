@@ -3,6 +3,7 @@ package model;
 import java.util.Date;
 
 public class Pagamento {
+    // Atributos
     private int id;
     private Pedido pedido;
     private String forma;
@@ -10,6 +11,7 @@ public class Pagamento {
     private Date data;
     private static int contador = 1;
 
+    // Construtor
     public Pagamento(Pedido pedido, String forma) {
         this.id = contador++;
         this.pedido = pedido;
@@ -17,6 +19,8 @@ public class Pagamento {
         this.status = "Pendente";
         this.data = new Date();
     }
+
+    // Métodos
 
     public void processar() {
         this.status = "Processando";

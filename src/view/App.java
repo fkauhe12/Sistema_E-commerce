@@ -6,12 +6,12 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Dados iniciais
-        Endereco endereco = new Endereco("123", "Centro", "CidadeX", "EstadoY", "12345-678");
+        // Dados Endereco, Cliente e Administrador
+        Endereco endereco = new Endereco("123", "Centro", "Fortaleza", "CE", "60850-000");
         Cliente cliente = new Cliente("João", "joao@email.com", endereco, "123.456.789-00", "99999-9999");
         Administrador admin = new Administrador("Felipé", "felipe@email.com", endereco, "987.654.321-00", "88888-8888");
 
-        // Produtos disponíveis
+        // produtos disponíveis já no estoque
         List<Produtos> estoque = new ArrayList<>();
         estoque.add(new Produtos("Notebook", "Notebook Gamer", 3500.0, 10, "Informática"));
         estoque.add(new Produtos("Mouse", "Mouse sem fio", 150.0, 50, "Acessórios"));
